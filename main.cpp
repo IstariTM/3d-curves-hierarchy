@@ -46,7 +46,7 @@ void printPointsAndDerivatives(std::vector<Curve3D*> curves, double t) {
 		Vector3D derivative = curve->getDerivative(t);
 		std::cout << "derivative : " << derivative << std::endl;
 	}
-};
+}
 
 int main() {
 
@@ -65,11 +65,9 @@ int main() {
 	//totalSum = std::accumulate(circles.begin(), circles.end(), 0., [](auto a, auto b) { return (a + b->radius()); });
 	double totalSum = 0.0;
 	#pragma omp parallel for reduction(+:totalSum)
-	{
- 		for (int i = 0; i < circles.size(); ++i) {
- 			totalSum += circles[i]->radius();
- 		}
-	}
+ 	for (int i = 0; i < circles.size(); ++i) {
+ 		totalSum += circles[i]->radius();
+ 	}
 	std::cout << "Total sum of radii: " << totalSum << std::endl;
 	
 	for (auto curve : curves) {
