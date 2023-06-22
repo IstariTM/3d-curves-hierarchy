@@ -22,7 +22,7 @@ Follow the steps below to build the project using CMake:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/3d-curves-hierarchy.git
+   git clone https://github.com/IstariTM/3d-curves-hierarchy.git
 
 2. Create a build directory and navigate into it:
    ```shell
