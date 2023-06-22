@@ -15,3 +15,7 @@ set_target_properties(3d_curves PROPERTIES PUBLIC_HEADER 3d_curves.h)
 target_link_libraries(3d_curves_hierarchy PUBLIC
     3d_curves
 )
+
+target_link_libraries(3d_curves_hierarchy PUBLIC 
+    OpenMP::OpenMP_CXX
+)
