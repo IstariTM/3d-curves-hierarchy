@@ -20,6 +20,7 @@ public:
 	virtual double step() const = 0;
 	virtual Vector3D getPoint(double t) const = 0;
 	virtual Vector3D getDerivative(double t) const = 0;
+	virtual ~Curve3D() {};
 
 };
 
