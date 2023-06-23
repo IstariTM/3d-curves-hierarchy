@@ -38,7 +38,7 @@ std::vector<Curve3D*> generateRandomCurves(int curvesCount) {
 	return curves;
 }
 
-void printPointsAndDerivatives(std::vector<Curve3D*> curves, double t) {
+void printPointsAndDerivatives(const std::vector<Curve3D*>& curves, double t) {
 	for (const auto& curve : curves) {
 		std::cout << "Curve type: " << curve->type() << std::endl;
 		Vector3D point = curve->getPoint(t);
